@@ -14,13 +14,13 @@ gemensamma [dokumentationsstandarden](documentation_standard.md).
 
 | App | Repo | Doc-plats | Ingång idag | Mot standard? |
 |-----|------|-----------|-------------|---------------|
-| **Syntes** | [syntes](https://github.com/pepestal/syntes) | `syntes/docs/` | `docs/README.md` | 🟡 nära |
+| **Syntes** | [syntes](https://github.com/pepestal/syntes) | `syntes/docs/` + rot | rot-`README.md` | ✅ migrerad |
 | **Todos** | [todos](https://github.com/pepestal/todos) | `todos/docs/` + rot | rot-`README.md` | 🟡 nära |
 | **Stronk** | [stronk](https://github.com/pepestal/stronk) | `stronk/docs/` + rot | rot-`README.md` | ✅ migrerad |
 | **Signal · backend** | [signal_backend](https://github.com/pepestal/signal_backend) | `Signal/backend/docs/` | rot-`README.md` | ✅ migrerad |
 | **Signal · frontend** | [signal_frontend](https://github.com/pepestal/signal_frontend) | `Signal/signal_frontend/docs/` | rot-`README.md` | ✅ migrerad |
 | **Signal** (paraply) | *(detta repo)* | `Signal/` (rot) | `.agents/AGENTS.md` (redirect) | ✅ hub klar |
-| **Portal** | [portal](https://github.com/pepestal/portal) | — | — | 🔴 saknar helt |
+| **Portal** | [portal](https://github.com/pepestal/portal) | `portal/docs/` + rot | rot-`README.md` | ✅ migrerad |
 
 ✅ migrerad till standarden · 🟢 nästan i mål · 🟡 mindre justeringar · 🟠 tydliga avvikelser · 🔴 saknar struktur
 
@@ -34,16 +34,17 @@ appar pekar hit.
 
 | Fil | Roll | Standardnamn |
 |-----|------|--------------|
-| `docs/README.md` ("Den Stora Bibeln") | Ingång/arkitektur | flytta kärnan till rot-`README.md`; gör `docs/README.md` till index |
+| `docs/ARCHITECTURE.md` ("Den Stora Bibeln") | Arkitektur | ✅ ← `docs/README.md` (bibeln) |
+| `docs/README.md` | Index | ✅ **ny** (rent index) |
 | `docs/INTEGRATION.md` | Integrationskälla | ✅ redan rätt |
 | `docs/DEPLOY.md` | Drift | ✅ `DEPLOY.md` |
-| `docs/Changelog.md` | Ändringslogg | → `CHANGELOG.md` (case) |
-| `docs/NULAGE.md` | Nuläge | → `STATUS.md` |
-| `docs/syntes-implementeringsplan.md` | Plan | → `ROADMAP.md` (eller `IMPLEMENTATION.md` om den lever kvar som fasplan) |
-| `README.md` (rot) | Ingång | behåll som ingång |
+| `docs/CHANGELOG.md` | Ändringslogg | ✅ ← `Changelog.md` (case) |
+| `docs/STATUS.md` | Nuläge | ✅ ← `NULAGE.md` |
+| `docs/ROADMAP.md` | Plan | ✅ ← `syntes-implementeringsplan.md` (behåller fasplanen; öppnar med `Idéer`) |
+| `README.md` (rot) | Ingång | ✅ ingång (pekar mot `docs/README.md`-index) |
 
-**Avvikelser:** ingången ligger i `docs/README.md` snarare än rot; `Changelog.md`
-fel case; `NULAGE`/implementeringsplan följer inte fasta namn.
+**Avvikelser:** ~~ingången ligger i `docs/README.md` snarare än rot; `Changelog.md`
+fel case; `NULAGE`/implementeringsplan följer inte fasta namn.~~ ✅ åtgärdat.
 
 ### Todos — `todos/docs/` + rot
 | Fil | Roll | Standardnamn |
@@ -127,10 +128,15 @@ minimal — därför skapades **ingen** `Signal/docs/`.
   `LOKALT/password.md` (**gitignorad**); prompt-filerna pekar dit istället.
   Lösenordet purgas ur git-historiken (commit `b470cad`) som sista steg.
 
-### Portal — saknar dokumentation helt 🔴
-Nystartat projekt (tidigare `landing-page`, Vite). **Ingen** `README.md`, inget
-`docs/`. **Förstahandskandidat** för att scaffoldas ur
-[`templates/`](templates/) — se dokumentationsstandarden §7.
+### Portal — `portal/docs/` + rot ✅ migrerad
+Nystartat projekt (tidigare `landing-page`, Vite — statisk landningssida/nav).
+Scaffoldat ur [`templates/`](templates/): rot-`README.md` (bibel) + `CLAUDE.md` +
+`docs/` (`README`-index, `CHANGELOG`, `STATUS`, `ROADMAP`). Innehållet är
+tillrättalagt för en statisk frontend (Vite-snabbstart i stället för Docker;
+ingen backend/DB).
+
+**Avvikelser:** inga. `INTEGRATION.md` och `ARCHITECTURE.md` **medvetet utelämnade**
+— appen rör inte Syntes och har ingen djup datamodell (noterat i `docs/README.md`).
 
 ---
 
@@ -144,7 +150,7 @@ i samma commit. Föreslagen ordning — enklast först:
 1. ~~**Signal backend**~~ — ✅ klar.
 2. ~~**Signal frontend**~~ — ✅ klar.
 3. ~~**Signal paraply**~~ — ✅ redirect-hub klar (loose-filer + credentials flaggade ovan).
-4. **Portal** — scaffolda ur mallen (inget att jaga, ren nystart).
+4. ~~**Portal**~~ — ✅ klar (scaffoldat ur mallen; `INTEGRATION`/`ARCHITECTURE` medvetet utelämnade).
 5. ~~**Stronk**~~ — ✅ klar (bibeln → rot, `docs/README.md`-index, `STATUS`/`CHANGELOG`/`INTEGRATION` omdöpta, `CLAUDE.md` → rot).
 6. **Todos** — case + dela upp `projektplan.md`.
-7. **Syntes** — flytta ingång till rot, döp om `NULAGE`/plan.
+7. ~~**Syntes**~~ — ✅ klar (bibeln → `docs/ARCHITECTURE.md`, nytt `docs/README.md`-index, `NULAGE`→`STATUS`, plan→`ROADMAP` med `Idéer`-sektion, `Changelog`→`CHANGELOG`; refs rättade).
