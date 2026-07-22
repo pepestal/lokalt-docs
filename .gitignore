@@ -1,0 +1,9 @@
+# ── LOKALT: paraply-repo enbart för dokumentation ─────────────────
+# Ignorera allt som default (inklusive alla underrepon/appar).
+*
+
+# ...men släpp in dokumentationen som ska synkas mellan datorer.
+!.gitignore
+!README.md
+!docs/
+!docs/**
