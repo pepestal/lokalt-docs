@@ -2,17 +2,16 @@ Dokumentation för projektet finns på följande ställen:
 För frontend (root mapp signal_frontend):
 .agents/
 .claude/
-src/docs/
+docs/
 
 För backend (root mapp backend):
 .agents/
 .claude/
-backend/docs/
+docs/
 
 Projektet är live på adressen: https://signal.syntes.dev/
-För att du ska komma åt sidan krävs inloggningsuppgifter, och du får åtkomst med:
-Användarnamn: agent
-Lösenord: YtcWbp^%RdZ#G6
+För att du ska komma åt sidan krävs inloggningsuppgifter. De finns i `password.md`
+i LOKALT-roten (gitignorad — finns bara lokalt och checkas aldrig in).
 
 
 

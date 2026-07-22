@@ -38,8 +38,14 @@ Detaljerna — endpoints, scheman, hur man ansluter en app — finns i
 
 ## Dokumentation
 
+**Ekosystemet:**
 - [docs/architecture.md](docs/architecture.md) — hur apparna kommunicerar (diagram + flöden)
 - [docs/syntes_integration.md](docs/syntes_integration.md) — komplett integrationsguide (kopia av `syntes/docs/INTEGRATION.md`)
+
+**Dokumentation om dokumentationen:**
+- [docs/documentation_map.md](docs/documentation_map.md) — **var varje apps dokumentation ligger** och hur långt den kommit mot standarden
+- [docs/documentation_standard.md](docs/documentation_standard.md) — gemensam standard för filnamn, platser och roller i alla repon
+- [docs/templates/](docs/templates/) — kopieringsfärdig startuppsättning (framework) för nystartade appar, t.ex. `portal`
 
 ---
 

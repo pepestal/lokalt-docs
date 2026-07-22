@@ -8,6 +8,9 @@
 !docs/
 !docs/**
 
+# Hemligheter: lösenordsfilen får ALDRIG checkas in (finns bara lokalt).
+password.md
+
 # Signal: ta med mappens innehåll (övergripande dokumentation),
 # men INTE de två egna underrepona.
 !Signal/
