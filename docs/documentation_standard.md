@@ -43,7 +43,7 @@ samma roller — oavsett om du öppnar `syntes`, `stronk` eller ett nystartat pr
 | `docs/README.md` | **Index** över `docs/` + "var finns vad"-tabell för hela projektet. Kort — inte en andra bibel. | **Obligatorisk** |
 | `docs/CHANGELOG.md` | Kronologisk ändringslogg. Keep-a-Changelog-stil med `## [Ej släppt]` överst. | **Obligatorisk** |
 | `docs/STATUS.md` | Nuläge: var vi står, nästa steg, öppna beslut, infra-förutsättningar. Ingången för den som ska *ta vid*. (Ersätter tidigare `NULAGE.md`.) | Rekommenderad |
-| `docs/ROADMAP.md` | Versionsplan, vad som medvetet ligger efter v1, när/om det kommer. | Rekommenderad |
+| `docs/ROADMAP.md` | Versionsplan, vad som medvetet ligger efter v1, när/om det kommer. **Öppnar alltid med en `## Idéer / att utreda`-sektion** (se §6). | Rekommenderad |
 | `docs/ARCHITECTURE.md` | Djupare arkitektur: datamodell/DDL, diagram, komponenter, dataflöden. | Vid behov |
 | `docs/INTEGRATION.md` | Syntes-integration. **För appar som pratar med Syntes:** en kort pekare till sanningskällan `syntes/docs/INTEGRATION.md` + appens eget kontrakt (vilka events den producerar/konsumerar). **För Syntes själv:** detta *är* källan. | Om appen rör Syntes |
 | `docs/DEPLOY.md` | Driftsättning: Docker Compose, Caddy, backup-rutiner. | Vid behov |
@@ -110,6 +110,12 @@ namnet (`grep -ri "gammalt_namn"`) och rätta varje träff i samma commit.
   `### Tillagt` / `### Ändrat` / `### Fixat` / `### Borttaget`. Rader i imperativ.
 - **STATUS:** börjar med en enradig statusrad (t.ex. "🚧 planering klar, kod ej
   påbörjad") och pekar ut *nästa konkreta steg*.
+- **ROADMAP:** öppnar alltid med en `## Idéer / att utreda`-sektion (först i
+  innehållsförteckningen) — ett fritt, personligt snabb-capture-område för uppslag
+  *innan* de är versionsplacerade eller beslutade. Ingen punkt där är ett åtagande;
+  när en idé mognar flyttas den vidare (→ `STATUS.md` `Öppna beslut`, en versions­rubrik,
+  eller arkitektur-/implementationsdokumentet). Syftet är en låg tröskel att skriva
+  ner en tanke som senare kan tas upp med en agent för diskussion.
 - **Syntes-integration:** appens egen `INTEGRATION.md` sammanfattar bara — vid minsta
   konflikt gäller `syntes/docs/INTEGRATION.md`. Skriv det uttryckligen i dokumentet.
 
