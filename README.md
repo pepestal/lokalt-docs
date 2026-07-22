@@ -12,11 +12,16 @@ datorer.
 
 | App | Mapp | Repo | Beskrivning |
 |-----|------|------|-------------|
-| Signal | `Signal/` | — | _(fyll i)_ |
-| Landing page | `landing-page/` | — | _(fyll i)_ |
-| Stronk | `stronk/` | _(länk)_ | _(fyll i)_ |
-| Syntes | `syntes/` | _(länk)_ | _(fyll i)_ |
-| Todos | `todos/` | _(länk)_ | _(fyll i)_ |
+| Signal (backend) | `Signal/backend/` | [pepestal/…](https://github.com/pepestal) | _(fyll i)_ |
+| Signal (frontend) | `Signal/signal_frontend/` | [pepestal/…](https://github.com/pepestal) | _(fyll i)_ |
+| Portal | `portal/` | [pepestal/portal](https://github.com/pepestal/portal) | _(fyll i)_ |
+| Stronk | `stronk/` | [pepestal/stronk](https://github.com/pepestal/stronk) | _(fyll i)_ |
+| Syntes | `syntes/` | [pepestal/syntes](https://github.com/pepestal/syntes) | _(fyll i)_ |
+| Todos | `todos/` | [pepestal/todos](https://github.com/pepestal/todos) | _(fyll i)_ |
+
+> **Signal** är en paraplymapp: dess övergripande dokumentation ligger i detta
+> repo, men de två underrepona `backend/` och `signal_frontend/` versionshanteras
+> var för sig och ignoreras här.
 
 ## Dokumentation
 

@@ -23,13 +23,13 @@ Skiss över hur apparna hänger ihop (Mermaid renderas direkt på GitHub):
 ```mermaid
 graph LR
   signal[Signal]
-  landing[Landing page]
+  portal[Portal]
   stronk[Stronk]
   syntes[Syntes]
   todos[Todos]
 
   %% Fyll i de faktiska pilarna, t.ex.:
-  %% landing -->|REST| syntes
+  %% portal -->|REST| syntes
 ```
 
 ## Miljöer & endpoints

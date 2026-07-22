@@ -7,3 +7,10 @@
 !README.md
 !docs/
 !docs/**
+
+# Signal: ta med mappens innehåll (övergripande dokumentation),
+# men INTE de två egna underrepona.
+!Signal/
+!Signal/**
+Signal/backend/
+Signal/signal_frontend/
