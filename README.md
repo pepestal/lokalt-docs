@@ -47,6 +47,10 @@ Detaljerna — endpoints, scheman, hur man ansluter en app — finns i
 - [docs/documentation_standard.md](docs/documentation_standard.md) — gemensam standard för filnamn, platser och roller i alla repon
 - [docs/templates/](docs/templates/) — kopieringsfärdig startuppsättning (framework) för nystartade appar, t.ex. `portal`
 
+**Arbeta med AI-agenter (projektoberoende):**
+- [docs/agent_prompt.md](docs/agent_prompt.md) — generell agent-prompt (undersök → planera → genomför) som kan klistras in i vilket projekt som helst
+- [docs/agent_prompt_short.md](docs/agent_prompt_short.md) — kort variant (dok-sökvägar, changelog/drift, terminal- och server-tillåtelse)
+
 ---
 
 ## Arbeta på en ny dator

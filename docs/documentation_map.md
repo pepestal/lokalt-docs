@@ -125,9 +125,14 @@ minimal — därför skapades **ingen** `Signal/docs/`.
   för Statistik-sidan, Update 1.4). Self-referenser uppdaterade.
 - `REVIEW_BACKEND.md`, `REVIEW_FRONTEND.md` och `docs/CREATE_*.sql` — raderade
   (avsiktlig städning). Mina nya dok pekar inte längre på dem.
-- 🔐 Inloggningsuppgifter flyttade ut ur `prompt.md`/`short_prompt.md` till
-  `LOKALT/password.md` (**gitignorad**); prompt-filerna pekar dit istället.
-  Lösenordet purgas ur git-historiken (commit `b470cad`) som sista steg.
+- 🔐 Inloggningsuppgifter flyttade ut ur agent-prompten till `LOKALT/password.md`
+  (**gitignorad**); prompt-filerna pekar dit istället. Lösenordet purgas ur
+  git-historiken (commit `b470cad`) som sista steg.
+- 📝 De projektoberoende agent-prompterna flyttade från `Signal/prompt.md` +
+  `Signal/short_prompt.md` till [`agent_prompt.md`](agent_prompt.md) +
+  [`agent_prompt_short.md`](agent_prompt_short.md) i `docs/` — de är generella (gäller
+  vilket projekt som helst), så de hör hemma i ekosystem-dokumentationen, inte under en
+  enskild app.
 
 ### Portal — `portal/docs/` + rot ✅ migrerad
 Nystartat projekt (tidigare `landing-page`, Vite — statisk landningssida/nav).
