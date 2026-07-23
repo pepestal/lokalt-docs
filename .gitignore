@@ -17,3 +17,7 @@ password.md
 !Signal/**
 Signal/backend/
 Signal/signal_frontend/
+
+# Claude-behörigheter är maskin-lokala (per dator) — checka aldrig in dem,
+# så beter sig Signal/.claude likadant som de andra repons settings.local.json.
+Signal/**/settings.local.json
