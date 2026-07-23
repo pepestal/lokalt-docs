@@ -1,40 +1,21 @@
-Dokumentation för projektet finns på följande ställen:
-För frontend (root mapp signal_frontend):
-.agents/
-.claude/
-docs/
+Dokumentation för projektet finns i respektive rotmapps `.agents/`, `.claude/` och
+`docs/`. Ett projekt kan ha flera rotmappar (t.ex. en för frontend och en för backend) —
+leta i var och en.
 
-För backend (root mapp backend):
-.agents/
-.claude/
-docs/
-
-Projektet är live på adressen: https://signal.syntes.dev/
-För att du ska komma åt sidan krävs inloggningsuppgifter. De finns i `password.md`
-i LOKALT-roten (gitignorad — finns bara lokalt och checkas aldrig in).
+Projektet kan vara live på en publik adress. Krävs inloggningsuppgifter för att komma åt
+sidan finns de i `password.md` i LOKALT-roten (gitignorad — finns bara lokalt och checkas
+aldrig in).
 
 ## Server & deploy (agenten har stående tillåtelse)
 
-Jag (Peter) har SSH-access till produktions-VPS:en och du som agent har **stående
+Jag (Peter) har SSH-access till produktionsservern och du som agent har **stående
 tillåtelse att köra server-kommandon som hör till uppgiften** (deploy m.m.) — du behöver
-inte fråga varje gång.
-
-**VPS:** `root@65.109.143.130` (nyckelbaserad, inget lösenord). Allt körs i **Docker**
-bakom **Caddy** (:443) + **Authelia**-login (därför ger `/api/...` `302` utifrån). Signal
-ligger i `/root/apps/signal/{frontend,backend}`.
-
-**Deploya frontend:**
-```bash
-ssh root@65.109.143.130
-cd /root/apps/signal/frontend && git pull --ff-only && docker compose up -d --build
-# verifiera: docker logs signal-frontend --tail 12   (ska visa: ✓ Ready)
-```
-Backend deployas analogt i `/root/apps/signal/backend` (egen docker-compose.yml).
+inte fråga varje gång. De konkreta serveruppgifterna (adress, sökvägar, deploy-kommandon)
+för det aktuella projektet finns i projektets egen dokumentation (`.claude/` / `docs/`)
+eller i `password.md` i LOKALT-roten.
 
 ⚠️ **Gotcha (viktig):** Claude Codes auto-läge-**permissionsklassificerare** blockerar
 `ssh`/`scp`/`curl`-mot-servrar (och t.o.m. redigering av settings-filen) OAVSETT tillåtelse
-i chatten. Den honorerar bara allow-regler i `.claude/settings.local.json`
+i chatten. Den honorerar bara allow-regler i projektets `.claude/settings.local.json`
 (`Bash(ssh:*)`, `Bash(scp:*)`, `Bash(curl:*)`) eller ett öppnare permission-läge. Är dessa
 inte på plats kan agenten inte deploya — då är det spärren, inte brist på tillåtelse.
-
-
