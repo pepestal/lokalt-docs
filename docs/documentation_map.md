@@ -107,12 +107,13 @@ Rättade även brutna länkar i rot-`README.md` (`./backend/docs/` → `./docs/`
 | `docs/UI_*.md` (5 st) | ← `src/docs/UI_*.md` (flyttade + konsoliderade) |
 | `docs/{README,STATUS}.md` | **nya** |
 
-> **UI-doc-konsolidering (gjord):** det arkiverade `UI_RULES.md` (746 rader) togs
+> **UI-doc-konsolidering (2 pass):** (1) arkiverade `UI_RULES.md` (746 rader) togs
 > bort; dess unika, giltiga innehåll — **responsiv/mobil-arkitekturen** +
-> **premium-finesser-katalogen** — flyttades in i `UI_PATTERNS.md §6–7`. De 5
-> avsiktliga UI-dokumenten (LAW/FUSION/PATTERNS/OVERVIEW/GUIDE) behölls (en medveten
-> designhierarki). Alla `UI_RULES`-referenser (docs, `.agents/.claude`-skills,
-> `.tsx`/`.ts`-kommentarer) + `md §`-ankare repekade; daterad historik lämnad orörd.
+> **premium-finesser-katalogen** — flyttades in i `UI_PATTERNS.md §6–7`. (2) 2026-07-23
+> upplöstes även `UI_FUSION.md` (en proposal-doc; färg/material redan kondenserat i
+> `UI_LAW`): graf-hues → `UI_LAW §5`, preset-/accent-struktur → `UI_GUIDE §5.0`,
+> materialkostnader → `UI_LAW §9`. Kvar: **4 UI-dok — LAW / PATTERNS / OVERVIEW / GUIDE.**
+> Alla `UI_RULES`- och `UI_FUSION`-referenser repekade; daterad historik lämnad orörd.
 
 ### Signal (paraply) — `Signal/` i detta repo ✅ hub klar
 Redirect-hubben ligger i `.agents/AGENTS.md` (uppdaterad: pekar in i båda repons
