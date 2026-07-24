@@ -77,6 +77,12 @@ man lägger till en ny händelsetyp.
   ändras aldrig — bryt strukturen → skapa `v2`. `additionalProperties: false`.
 - **Commands:** be en annan app *göra* något via `objekt.verb.requested.v1` (imperativ);
   ägaren utför och publicerar sedan faktum-eventet.
+- **Ägande/kontext hör hemma hos producenten (modell A):** flaggor som avgör hur andra ska
+  reagera — t.ex. `held` (äger användaren aktien?) — sätts av den *producerande* appen på
+  eventet; navet och konsumenterna håller ingen egen kopia. Signal härleder `held` ur sina
+  transaktioner. Gör nav-/konsumentregler triviala och håller apparna frikopplade. Omvändbart:
+  navet kan senare bygga en egen lägesbild (modell B). Full motivering i
+  [`syntes/docs/INTEGRATION.md`](syntes_integration.md) §4.
 - **Robusthet:** publicering får aldrig krascha appen (try/except + timeout). Navet är ett
   tillägg, aldrig ett beroende för kärnfunktionen.
 - **Nycklar:** i `.env`, aldrig i git. Klienter som distribueras (APK/widget) får bara `read`.
